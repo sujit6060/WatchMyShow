@@ -36,7 +36,7 @@ function Search() {
             <div style={{ display: "flex", margin: "15px 0px" }}>
                 <TextField
                     style={{ flex: 1, color: "white", backgroundColor: "white" }}
-                    className="searchBox" label="Search Here.."
+                    className="searchBox" label="Search Movie Here.."
                     variant="filled"
                     onChange={(event) => setSearch(event.target.value)}
 

@@ -10,15 +10,16 @@ function Trending() {
 
     const [content, setContent] = useState([])
     const [page, setpage] = useState(1)
+   
     const FetchTrending = () => {
         axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=2e49c21a38f4f29524d67a27bf371648&page=${page}`).then((data) => {
             setContent(data.data.results)
         })
     }
+   
 
     useEffect(() => {
         FetchTrending();
-
         // eslint-disable-next-line
     }, [page])
 
