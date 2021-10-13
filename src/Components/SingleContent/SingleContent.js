@@ -17,8 +17,8 @@ function SingleContent({
 
     const FetchVideos = () => {
         axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=2e49c21a38f4f29524d67a27bf371648&language=en-US&include_adult=false`).then((data) => {
-            console.log(data.data.results)    
-        setvideo(data.data.results[0]?.key);
+
+            setvideo(data.data.results[0]?.key);
             
         })
     }
@@ -39,9 +39,8 @@ function SingleContent({
                 {media_type === 'tv' ? "TvShow" : "Movie"}
                 <span className="subTitle"><i className="fas fa-star"></i> . {vote_average}</span>
             </span>
-            <div style={{paddingLeft:"35px"}}>
-            <Button variant="contained" color="error" style={{width:"130px"}} href={`https://www.youtube.com/watch?v=${video}`}>Watch Trailer</Button>
-            </div>
+            
+            <Button variant="outlined" color="error" href={`https://www.youtube.com/watch?v=${video}`}>Watch Trailer</Button>
         </div>
     )
 }
