@@ -21,7 +21,7 @@ function SingleContent({
            
                 {media_type === 'tv' ? "TvShow" : "Movie"}
                 <span className="subTitle"><i class="fas fa-star"></i> . {vote_average}</span>
-                <span className="subTitle">{date}</span>
+                {/* <span className="subTitle">{date}</span> */}
                 
             </span>
         </div>
