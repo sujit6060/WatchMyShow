@@ -11,39 +11,38 @@ import { useEffect } from 'react';
 
 export default function MainNav() {
   const [value, setValue] = React.useState(0);
-  const history =  useHistory();
+  const history = useHistory();
 
   useEffect(() => {
-    if (value==0)
-    {
+    if (value == 0) {
       history.push('/');
     }
-    else if(value==1){
+    else if (value == 1) {
       history.push('/movies');
-    }else if(value==2){
+    } else if (value == 2) {
       history.push('/series');
-    }else if(value==3){
+    } else if (value == 3) {
       history.push('/search');
     }
-    
-  }, [value,history])
+
+  }, [value, history])
 
   return (
     <div>
-    <Box sx={{ width: '100%',bottom:"0",position:"fixed" }}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} />
-        <BottomNavigationAction label="Movies" icon={<MovieIcon />} />
-        <BottomNavigationAction label="TV Series" icon={<LiveTvIcon />} />
-        <BottomNavigationAction label="Search" icon={<SearchIcon />} />
-      </BottomNavigation>
-    </Box>
+      <Box sx={{ width: '100%', bottom: "0", position: "fixed" }}>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} />
+          <BottomNavigationAction label="Movies" icon={<MovieIcon />} />
+          <BottomNavigationAction label="TV Series" icon={<LiveTvIcon />} />
+          <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+        </BottomNavigation>
+      </Box>
     </div>
   );
 }
