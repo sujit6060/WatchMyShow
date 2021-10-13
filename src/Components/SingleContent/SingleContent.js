@@ -1,4 +1,3 @@
-import { Badge } from '@mui/material'
 import React from 'react'
 import { img_300, unavailable } from '../../config/Config'
 import './SingleContent.css'
@@ -20,7 +19,7 @@ function SingleContent({
 
                 {media_type === 'tv' ? "TvShow" : "Movie"}
                 <span className="subTitle">{date}</span>
-                <span className="subTitle"><i class="fas fa-star"></i> . {vote_average}</span>
+                <span className="subTitle"><i className="fas fa-star"></i> . {vote_average}</span>
 
 
             </span>

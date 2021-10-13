@@ -1,8 +1,6 @@
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import SingleContent from '../../Components/SingleContent/SingleContent'
@@ -45,21 +43,6 @@ function Search() {
                 />
                 <Button variant="outlined" color="error" style={{ marginLeft: 10 }} onClick={FetchSearch}><SearchIcon /></Button>
             </div>
-            {/* <div>
-                <Tabs
-                    style={{backgroundColor:"white"}}
-                    value={type}
-                    onChange={(event,newValue)=>
-                        {settype(newValue);
-                            setPage(1);
-                    }}
-                    textColor="primary"
-                    indicatorColor="primary"
-                >
-                    <Tab style={{width: "50%" }} label="Search Movies" />
-                    <Tab style={{width: "50%" }} label="Search TvShows" />
-                </Tabs>
-                </div> */}
             <div className="trending">
                 {content &&
                     content.map((ele) => (
